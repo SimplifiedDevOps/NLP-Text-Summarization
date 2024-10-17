@@ -115,3 +115,127 @@ It is more effective than the first type with a lower risk of nausea and vomitin
 
 ## Final Thoughts
 The **BART Transformer** model is effective for **abstractive summarization**, but further **fine-tuning** is needed to excel in structured summarization tasks. With improvements in **hyperparameters**, **decoding strategies**, and **training data**, the model can generate more precise and coherent summaries. This project successfully demonstrates the potential of **BART** for summarizing both **dialogues** and **custom text inputs**.
+
+# MODEL UPDATE
+
+# Evaluation of Summary and Scores
+## Text Provided:
+MADISON, Wis.—Global Women’s Leadership Network (GWLN) Director Eleni Giakoumopoulos made her first ever presentation at an Asian credit union conference by leading sessions on empowering women to become leaders at September’s Asian Credit Union Forum 2024 in Bali, Indonesia. 
+
+Asian Confederation of Credit Unions’ (ACCU) CEO Elenita San Roque, who has worked to expand the reach of GWLN Sister Societies to more than 20 Asian countries and received the 2016 Athena Leadership Award, invited Giakoumopoulos to give a September 7 main stage presentation that focused on strategies to close the gender gap and foster inclusive leadership within the credit union sector.  
+
+Giakoumopoulos explored practical strategies for promoting gender diversity, inclusivity and equality within credit unions to empower women leaders, emphasizing that women must make their voice heard and seize leadership opportunities to tackle barriers and change the numbers for women in leadership.  
+
+She encouraged male leaders to engage in women's empowerment efforts by opening conversations and providing opportunities for women to thrive. 
+
+"We are doing this not just for us today but for the next generation—our daughters, granddaughters and their children," said Giakoumopoulos. “Women are an influential force in the global economy. In line with the mission of World Council to advance financial inclusion through the credit union and cooperative model, we are committed to championing economic empowerment for women through the Global Women's Leadership Network by consciously promoting gender equity and equality. It's smart for our countries, our credit unions and our communities when we invest in women.” 
+
+Along with her main stage presentation, Giakoumopoulos also participated in a three-day Women’s Workshop held in the days leading up to the Forum.  
+
+## Summary Provided:
+### Summary:
+Eleni Giakoumopoulos made her first presentation at an Asian credit union conference by leading sessions on empowering women to become leaders at September's Asian Credit Union Forum 2024 in Bali, Indonesia. She encourages male leaders to engage in women's empowerment efforts by opening conversations.
+
+---
+
+## Original Text Highlights:
+### Event:
+- **First-ever presentation** by Eleni Giakoumopoulos at the **Asian Credit Union Forum 2024**.
+- Held in **Bali, Indonesia**.
+
+### Topics Covered:
+- **Empowering women** to become leaders in the credit union sector.
+- **Engaging male leaders** in empowerment efforts through conversations and opportunities.
+
+### Additional Points from the Original Text:
+- Focused on **closing the gender gap** and fostering **inclusive leadership**.
+- Participation in a **three-day Women’s Workshop** before the event.
+- Emphasis on **economic empowerment** and **gender equality** as part of the Global Women's Leadership Network’s (GWLN) mission.
+
+---
+
+## Evaluation of the Provided Summary:
+
+### Strengths:
+- Captures the **essence of the event**, including Giakoumopoulos’s role and the **location (Bali)**.
+- Reflects the core message of **empowering women** and **involving male leaders** in the conversation.
+
+### Missing Details:
+- Does not mention:
+  - **Closing the gender gap** and fostering **inclusive leadership**.
+  - Participation in the **three-day Women’s Workshop**.
+  - Focus on **economic empowerment** through the Global Women’s Leadership Network (GWLN).
+  - The **larger context** of investment in future generations and credit union benefits.
+
+### Conclusion:
+The summary captures the key points, but it could be more complete by including other aspects like the workshop, specific strategies discussed, and the focus on financial empowerment.
+
+---
+
+## Analysis of the Evaluation Scores
+
+### ROUGE Scores:
+
+- **ROUGE-1 (Unigram Overlap)**:
+  - Precision: 0.91  
+  - Recall: 0.64  
+  - F1 Score: 0.75  
+  **Interpretation**:  
+  The generated summary captures most of the **key words** from the original text (high precision) but misses some relevant details (lower recall).
+
+- **ROUGE-2 (Bigram Overlap)**:
+  - Precision: 0.78  
+  - Recall: 0.54  
+  - F1 Score: 0.64  
+  **Interpretation**:  
+  The summary captures some **phrases (bigrams)** accurately, but it could include more relevant multi-word expressions to improve recall.
+
+- **ROUGE-L (Longest Common Subsequence)**:
+  - Precision: 0.88  
+  - Recall: 0.62  
+  - F1 Score: 0.73  
+  **Interpretation**:  
+  The summary maintains much of the **sequence and structure** of the original text, although some sections are omitted.
+
+### BLEU Score:
+- **Score**: 0.4050  
+  **Interpretation**:  
+  A BLEU score of **0.405** is fairly good, indicating that the **phrasing** in the generated summary matches the original text reasonably well, though there are some deviations.
+
+### BERTScore:
+- **Precision**: 0.9742  
+- **Recall**: 0.9526  
+- **F1 Score**: 0.9633  
+  **Interpretation**:  
+  **High BERTScore** values suggest that the **semantic meaning** of the generated summary aligns closely with the original text. This indicates that the summary accurately reflects the intent and ideas, even though it misses some specific details.
+
+---
+
+## Suggestions for Improvement:
+
+### 1. Enhance Detail Coverage:
+- Add details about the **three-day workshop** and the focus on **closing the gender gap**.
+- Include the **economic empowerment message** and the emphasis on **future generations**.
+
+### 2. Improve Recall:
+- Incorporate more **multi-word phrases** from the original text to improve **ROUGE-2** and **ROUGE-L** scores.
+
+### 3. Refine Phrasing:
+- Slight rephrasing to match **specific expressions** from the original text could increase the **BLEU score**.
+
+---
+
+## Conclusion:
+
+### Strengths:
+- The generated summary captures the **key points** and aligns well with the **semantic meaning** of the original text (as shown by the **high BERTScore**).
+
+### Weaknesses:
+- The summary **omits several key details**, affecting **recall** in the ROUGE and BLEU scores.  
+- These missing elements slightly reduce the overall **completeness**.
+
+---
+
+## Final Thoughts:
+While the summary effectively communicates the **core ideas**, including additional relevant details would improve the **precision and recall**. This would ensure the summary aligns not just with the **meaning** but also with the **depth and structure** of the original content.
+
