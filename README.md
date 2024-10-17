@@ -239,3 +239,65 @@ The summary captures the key points, but it could be more complete by including 
 ## Final Thoughts:
 While the summary effectively communicates the **core ideas**, including additional relevant details would improve the **precision and recall**. This would ensure the summary aligns not just with the **meaning** but also with the **depth and structure** of the original content.
 
+------------------------------------------------------------------------------------------------
+
+# **Comparison of Results: First vs. Second Text**
+
+---
+
+## **1. ROUGE Scores Comparison**
+
+| **Metric**         | **First Text** (F1) | **Second Text** (F1) |
+|--------------------|---------------------|----------------------|
+| **ROUGE-1**        | 0.39                | **0.75**             |
+| **ROUGE-2**        | 0.18                | **0.64**             |
+| **ROUGE-L**        | 0.28                | **0.73**             |
+
+- **Conclusion:**  
+  The **second text** significantly outperforms the first in all ROUGE metrics. It captures more unigrams, bigrams, and sequences of the original text, indicating better word, phrase, and structural alignment.
+
+---
+
+## **2. BLEU Score Comparison**
+
+| **Metric** | **First Text** | **Second Text** |
+|------------|----------------|-----------------|
+| **BLEU**   | 0.0621         | **0.4050**      |
+
+- **Conclusion:**  
+  The **second text** achieves a much higher BLEU score, indicating better word sequence alignment with the reference text.
+
+---
+
+## **3. BERTScore Comparison**
+
+| **Metric**  | **First Text** | **Second Text** |
+|-------------|----------------|-----------------|
+| **Precision** | 0.8849       | **0.9742**      |
+| **Recall**    | 0.8880       | **0.9526**      |
+| **F1**        | 0.8864       | **0.9633**      |
+
+- **Conclusion:**  
+  The **second text** has significantly higher BERTScore values, indicating better semantic alignment with the reference text.
+
+---
+
+## **Summary of Comparison**
+
+| **Metric** | **Best Result** |
+|------------|-----------------|
+| **ROUGE-1** | Second Text     |
+| **ROUGE-2** | Second Text     |
+| **ROUGE-L** | Second Text     |
+| **BLEU**    | Second Text     |
+| **BERTScore** | Second Text   |
+
+---
+
+## **Final Verdict: Second Text is Better**
+
+- **Second text** achieves **higher scores** across **all metrics**—ROUGE, BLEU, and BERTScore.  
+- It demonstrates better **phrase alignment, word sequence matching, and semantic accuracy**.
+
+### **Conclusion:**  
+The **second text** is superior to the first in terms of both **quantitative metrics** and **semantic coherence**, making it the **better summary**.
