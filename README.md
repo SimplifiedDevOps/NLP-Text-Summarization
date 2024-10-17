@@ -301,3 +301,20 @@ While the summary effectively communicates the **core ideas**, including additio
 
 ### **Conclusion:**  
 The **second text** is superior to the first in terms of both **quantitative metrics** and **semantic coherence**, making it the **better summary**.
+
+
+## **Reason for Score Differences**
+
+- **First text**: Extracted from a **medical textbook** containing domain-specific terminology.  
+- **Second text**: Sourced from a **news article**, which aligns better with the pre-trained BART model’s general language understanding.
+
+The **second text** achieves better results because **BART's pre-trained model** performs well on **news-style content**, such as articles and reports, which share vocabulary and structure with its original training data. 
+
+---
+
+## **How to Improve Results for Medical Texts**
+
+To improve the **first text's summarization results**:
+1. **Fine-tune the BART model** with **medical datasets** to enhance its understanding of **domain-specific terminology** and context.
+2. **Incorporate medical-specific corpora** such as **PubMed** articles or clinical datasets to ensure better phrase matching and semantic alignment.
+3. **Increase training epochs** during fine-tuning to strengthen the model’s capability in generating summaries with complex medical terms.
