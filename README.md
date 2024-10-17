@@ -8,6 +8,94 @@ This project demonstrates text summarization using the **BART** (Bidirectional a
 
 Performance evaluation is done using **ROUGE**, **BLEU**, and **BERTScore** metrics to assess how well the generated summaries align with reference summaries.
 
+# **Extractive vs. Abstractive Summarization**
+
+Summarization techniques are divided into **extractive** and **abstractive** approaches. Both aim to generate concise summaries, but they differ in how the summary is created.
+
+---
+
+## **1. Extractive Summarization**
+
+Extractive summarization works by **selecting key sentences, phrases, or words** directly from the original text. It retains the original structure and wording, making the summary a subset of the input content.
+
+### **How it Works:**
+- **No modification** of words or sentences.
+- Sentences with **high relevance or importance** are chosen based on statistical metrics or similarity.
+- Techniques often involve:
+  - **TF-IDF (Term Frequency-Inverse Document Frequency)**
+  - **TextRank algorithms**
+  - **Sentence scoring and ranking**
+
+### **Example:**
+**Original Text:**  
+"There are two types of emergency contraception. One type is identical to birth control pills and contains estrogen and progestin."
+
+**Extractive Summary:**  
+"There are two types of emergency contraception. One type contains estrogen and progestin."
+
+### **Advantages:**
+- **Faster** to generate since it only selects from the existing content.
+- **No new information** is introduced, which reduces factual inaccuracies.
+
+### **Disadvantages:**
+- The summary may be **disjointed** or **lack coherence**.
+- It does not **paraphrase** or rephrase content to make the summary more fluent.
+
+---
+
+## **2. Abstractive Summarization**
+
+Abstractive summarization aims to **generate a new version** of the text by **paraphrasing and rephrasing**. It produces summaries that **capture the core meaning** of the original content but with different wording and sentence structures.
+
+### **How it Works:**
+- Uses **Natural Language Processing (NLP) models** like:
+  - **BART (Bidirectional and Auto-Regressive Transformer)**
+  - **T5 (Text-to-Text Transfer Transformer)**
+- Requires **complex understanding** of the content to generate coherent, concise, and meaningful summaries.
+- Abstractive models rely on **sequence-to-sequence transformers**, capable of handling complex sentences.
+
+### **Example:**
+**Original Text:**  
+"There are two types of emergency contraception. One type is identical to birth control pills and contains estrogen and progestin."
+
+**Abstractive Summary:**  
+"Emergency contraception includes options with hormones like estrogen or progestin."
+
+### **Advantages:**
+- Produces **coherent, fluent summaries** that capture the essence of the text.
+- **Paraphrases and condenses** information to make it more concise.
+
+### **Disadvantages:**
+- **More computationally expensive** and requires advanced NLP models.
+- Risk of **factual inaccuracies** if the model misunderstands the content.
+
+---
+
+## **Comparison Table**
+
+| **Aspect**                     | **Extractive Summarization**              | **Abstractive Summarization**              |
+|---------------------------------|--------------------------------------------|-------------------------------------------|
+| **Method**                     | Selects key sentences or phrases from input | Generates new text by paraphrasing and rephrasing |
+| **Coherence**                  | May lack coherence                         | More fluent and concise                  |
+| **Computational Cost**         | Low                                        | High                                      |
+| **Risk of Inaccuracies**       | Low (uses exact words)                     | Higher (due to rephrasing)                |
+| **Example Techniques**         | TF-IDF, TextRank                           | BART, T5, GPT models                     |
+
+---
+
+## **Conclusion: Which Approach to Use?**
+
+- **Extractive summarization** is suitable when:
+  - The goal is to **preserve the original wording**.
+  - **Speed** is critical, and minimal computation is preferred.
+
+- **Abstractive summarization** is better when:
+  - **Coherent and natural summaries** are required.
+  - There is a need to **paraphrase and condense** information.
+
+In this project, **BART** was used to perform **abstractive summarization**. The **second text (news article)** performed better because it aligned with BART’s **pre-trained knowledge** of general content. The **first text (medical book)** performed less effectively because medical language is **more specialized**, highlighting the need for **fine-tuning** on domain-specific datasets.
+
+
 ---
 
 ## Model Implementation Details
