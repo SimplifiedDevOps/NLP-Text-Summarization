@@ -1,4 +1,4 @@
-# Text Summarization Using BART Transformer Model – Documentation
+# Text Summarization Using BART Transformer Model
 
 ## Project Overview
 This project demonstrates text summarization using the **BART** (Bidirectional and Auto-Regressive Transformer) model. BART, a combination of **BERT** and **GPT**, is pre-trained on large datasets like CNN/DailyMail and can perform both **extractive** and **abstractive summarization**. The project involves two key stages:
